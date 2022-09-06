@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router";
+import { Skincontext } from "../context/Skincontext";
 
 export default function LandingPage() {
-  const [skinTypes, setSkinTypes] = useState();
+const{skinTypes}=useContext(Skincontext)
 
-  useEffect(() => {
-    fetch("http://localhost:5001/analyze-skin-api/us-central1/api/skinTypes")
-      .then((res) => res.json())
-      .then((data) => {
-        data = data.sort((a, b) => a.index - b.index);
-        setSkinTypes(data);
-      })
-      .catch(console.error);
-  }, []);
+  let navigate = useNavigate();
+  const handleGetStarted = () =>{navigate("/Dropdowns")}
+
 
   return (
     <>
@@ -30,7 +26,7 @@ export default function LandingPage() {
             ))}
         </div>
       </div>
-      <button>Get Started</button>
+      <button onClick={handleGetStarted}>Get Started</button>
     </>
   );
 }
