@@ -5,10 +5,11 @@ export const Skincontext = createContext({});
 export function SkincontextProvider({ children }) {
   const { Provider } = Skincontext;
   const [skinTypes, setSkinTypes] = useState();
-  const [userSelectedOptions, setUserSelectedOptions] = useState({type: null, concern: null})
-  
+  const [userSelectedOptions, setUserSelectedOptions] = useState();
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
-    fetch("http://localhost:5001/analyze-skin-api/us-central1/api/skinTypes")
+    fetch("https://analyze-skin-api.web.app/skintypes")
       .then((res) => res.json())
       .then((data) => {
         data = data.sort((a, b) => a.index - b.index);
@@ -16,9 +17,22 @@ export function SkincontextProvider({ children }) {
       })
       .catch(console.error);
   }, []);
-  
+
+  // useEffect(() => {
+  //   fetch("https://analyze-skin-api.web.app/products")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     })
+  //     .catch(console.error);
+  // }, []);
   const value = {
-    skinTypes, setSkinTypes, userSelectedOptions, setUserSelectedOptions
+    skinTypes,
+    setSkinTypes,
+    userSelectedOptions,
+    setUserSelectedOptions,
+    products,
+    setProducts,
   };
 
   return <Provider value={value}>{children}</Provider>;

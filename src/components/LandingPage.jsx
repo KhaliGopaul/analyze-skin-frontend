@@ -22,6 +22,7 @@ const{skinTypes}=useContext(Skincontext)
                   style={{ backgroundColor: skinType.colour }}
                 ></div>
                 <p>{skinType.name}</p>
+                <p>{skinType.description}</p>
               </div>
             ))}
         </div>
