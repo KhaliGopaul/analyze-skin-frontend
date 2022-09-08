@@ -1,5 +1,12 @@
 body{
   background-color: #F8EBE7;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #735668;
+}
+
+h1{
+  font-weight: 400;
+
 }
 .circle{
   height: 50px;
@@ -21,3 +28,4 @@ body{
   flex-direction: row;
   margin-bottom: 10px
 }
+

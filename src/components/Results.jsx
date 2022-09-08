@@ -11,7 +11,7 @@ export default function Results() {
   let navigate = useNavigate();
 
   const handleReviews = () => {
-    navigate("/reviews")
+    navigate("/ReviewForm")
   } 
 
   useEffect(() => {

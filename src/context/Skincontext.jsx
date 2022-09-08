@@ -7,6 +7,7 @@ export function SkincontextProvider({ children }) {
   const [skinTypes, setSkinTypes] = useState();
   const [userSelectedOptions, setUserSelectedOptions] = useState();
   const [products, setProducts] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     fetch("https://analyze-skin-api.web.app/skintypes")
@@ -18,14 +19,15 @@ export function SkincontextProvider({ children }) {
       .catch(console.error);
   }, []);
 
-  // useEffect(() => {
-  //   fetch("https://analyze-skin-api.web.app/products")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setProducts(data);
-  //     })
-  //     .catch(console.error);
-  // }, []);
+  useEffect(() => {
+    fetch("https://analyze-skin-api.web.app/reviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data);
+      })
+      .catch(console.error);
+  }, []);
+
   const value = {
     skinTypes,
     setSkinTypes,
@@ -33,6 +35,8 @@ export function SkincontextProvider({ children }) {
     setUserSelectedOptions,
     products,
     setProducts,
+    reviews,
+    setReviews
   };
 
   return <Provider value={value}>{children}</Provider>;

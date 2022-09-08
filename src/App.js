@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import "./App.css";
 import Results from "./components/Results";
 import ReviewForm from "./components/ReviewForm";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/Dropdowns" element={<Dropdowns />} />
           <Route path="/Results" element={<Results />} />
-          <Route path="/Reviews" element={<ReviewForm />} />
+          <Route path="/ReviewForm" element={<ReviewForm />} />
+          <Route path="/Reviews" element={<Reviews/>} />
         </Routes>
 
       </SkincontextProvider>
