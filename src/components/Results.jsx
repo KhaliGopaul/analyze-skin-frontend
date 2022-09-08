@@ -10,9 +10,9 @@ export default function Results() {
 
   let navigate = useNavigate();
 
-  //   const handleGetStarted = () => {
-  //     navigate("/Dropdowns");
-  //   };
+  const handleReviews = () => {
+    navigate("/reviews")
+  } 
 
   useEffect(() => {
     fetch("https://analyze-skin-api.web.app/products")
@@ -30,18 +30,19 @@ export default function Results() {
 
   return (
     <>
-      <div className="skinTypeWrapper">
+      <div className="">
         <div>
           {products &&
             products.map((product) => (
-              <ul className="descWrapper" key={product.id}>
-                <li>{product.productName}</li>
-                <li>{product.productDescription}</li>
-                <li>{product.productLink}</li>
-                <li>{product.skinConcern}</li>
-              </ul>
+              <div className="productWrapper" key={product.id}>
+                <img src={product.imagePath} />
+                <h3>{product.productName}</h3>
+                <p>{product.productDescription}</p>
+                <a href={product.productLink} >Buy Here</a>
+              </div>
             ))}
         </div>
+<button onClick={handleReviews}>Submit Review</button>
       </div>
       {/* <button onClick={handleGetStarted}>Get Started</button> */}
     </>

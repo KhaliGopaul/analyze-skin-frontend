@@ -16,12 +16,17 @@ export default function Dropdowns() {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     navigate("/Results");
   };
 
   console.log({userSelectedOptions});
   return (
+    <> 
+    <p> 
+WE UNDERSTAND THE DISTINCT SKIN JOURNEY OUR WOMEN OF COLOR ARE ON AND WE DESIRE TO TACKLE THE FIGHT WITH LOCATING PRODUCTS FOR DIVERSE WOMEN TO LEAVE SKIN HEALTHY, BEAUTIFUL AND STRONG SO THAT YOU CAN ALWAYS BUT YOUR BEST FOOT FORWARD. 
+</p>
     <form>
       <select /* onChange={(e) => handleChange(e)} */ name="type">
         <option value="">Select Skin Type</option>
@@ -38,7 +43,8 @@ export default function Dropdowns() {
         <option value="Hyperpigmentation">Hyperpigmentation</option>
         <option value="Dry Skin">Dry Skin</option>
       </select>
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={(e)=>handleSubmit(e)}>Submit</button>
     </form>
+    </>
   );
 }
