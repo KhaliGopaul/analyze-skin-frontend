@@ -2,21 +2,26 @@ body{
   background-color: #F8EBE7;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #735668;
+  margin: 2rem 3rem 0px 3rem
 }
 
 h1{
-  font-weight: 400;
+  font-weight: 400; 
+  margin: 0;
 
 }
 .circle{
   height: 50px;
   width: 50px;
-  border-radius: 50%
+  border-radius: 50%;
+  margin-right: 20px;
 
 }
 .skinTypeWrapper{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  height: 100vh;
   }
 
 .skinTypeWrapper img{
@@ -26,6 +31,70 @@ h1{
 .descWrapper{
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  align-items: center;
 }
 
+.btn{
+  background: none;
+  color: inherit;
+  border: 1px #735668 solid;
+  padding: 2px 32px 2px 32px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.btn:hover{
+background: #cfa095;
+color: #F8EBE7;
+
+}
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px 32px 0px;
+}
+.mainimage{
+  background-image: url("../public/assets/girls.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.profile{
+  background-image: url("../public/assets/profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}
+
+.getstarted{
+    font-size: 22px;
+    font-weight: 900;
+}
+
+select{
+  font-size: 20px;
+  color: #735668;
+  border: none;
+  margin-bottom: 20px;
+}
+.chooseone{
+  text-align: center;
+}
+
+.productWrapper{
+  margin-bottom:50px
+
+}
+
+.productimage{
+  width: 100px;
+    object-fit: cover;
+}
+
+.products h2{
+  text-align: center;
+}

@@ -30,12 +30,13 @@ export default function Results() {
 
   return (
     <>
-      <div className="">
+      <div className="products">
+        <h2>RESULTS</h2>
         <div>
           {products &&
             products.map((product) => (
               <div className="productWrapper" key={product.id}>
-                <img src={product.imagePath} />
+                <img className="productimage"src={product.imagePath} />
                 <h3>{product.productName}</h3>
                 <p>{product.productDescription}</p>
                 <a href={product.productLink} >Buy Here</a>

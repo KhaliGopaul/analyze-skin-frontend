@@ -13,7 +13,8 @@ const{skinTypes}=useContext(Skincontext)
     <>
     <p>DESIGNED WITH WOMEN OF COLOUR IN MIND. WE ARE A BRAND THATS COMMITTED TO BEING A PART OF THE SKIN JOURNEY, CONNECTING WOMEN OF COLOUR WITH BRANDS SPECIFICALLY CREATED FOR THE SKIN NEEDS OF WOMEN OF COLOUR. DOING OUR PART TO INSPIRE THE CONFIDENCE WE ALL SHOULD FIND IN OUR SKIN.</p>
       <div className="skinTypeWrapper">
-        <img src="/assets/girls.jpg" />
+        {/* <img src="/assets/girls.jpg" /> */}
+        <div className="mainimage"></div>
         <div>
             <h2>Know Your Skin Type</h2>
           {skinTypes &&
@@ -23,13 +24,17 @@ const{skinTypes}=useContext(Skincontext)
                   className="circle"
                   style={{ backgroundColor: skinType.colour }}
                 ></div>
+                <div>
                 <p>{skinType.name}</p>
                 <p>{skinType.description}</p>
+                </div>
               </div>
             ))}
         </div>
       </div>
-      <button onClick={handleGetStarted}>Get Started</button>
+      <div className="btncontainer">
+      <button className="btn getstarted" onClick={handleGetStarted}>Get Started</button>
+      </div>
     </>
   );
 }

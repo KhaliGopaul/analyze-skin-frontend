@@ -17,34 +17,43 @@ export default function Dropdowns() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     navigate("/Results");
   };
 
-  console.log({userSelectedOptions});
+  console.log({ userSelectedOptions });
   return (
-    <> 
-    <p> 
-WE UNDERSTAND THE DISTINCT SKIN JOURNEY OUR WOMEN OF COLOR ARE ON AND WE DESIRE TO TACKLE THE FIGHT WITH LOCATING PRODUCTS FOR DIVERSE WOMEN TO LEAVE SKIN HEALTHY, BEAUTIFUL AND STRONG SO THAT YOU CAN ALWAYS BUT YOUR BEST FOOT FORWARD. 
-</p>
-    <form>
-      <select /* onChange={(e) => handleChange(e)} */ name="type">
-        <option value="">Select Skin Type</option>
-        {skinTypes &&
-          lastThree.map((skinType) => (
-            <option /* value={skinType.name}  */key={skinType.id}>
-              {skinType.name}
-            </option>
-          ))}
-      </select>
-      <select onChange={(e) => handleChange(e)} name="concern">
-        <option value="">Select Skin Concern</option>
-        <option value="Acne">Acne</option>
-        <option value="Hyperpigmentation">Hyperpigmentation</option>
-        <option value="Dry Skin">Dry Skin</option>
-      </select>
-      <button onClick={(e)=>handleSubmit(e)}>Submit</button>
-    </form>
+    <>
+      <p>
+        WE UNDERSTAND THE DISTINCT SKIN JOURNEY OUR WOMEN OF COLOR ARE ON AND WE
+        DESIRE TO TACKLE THE FIGHT WITH LOCATING PRODUCTS FOR DIVERSE WOMEN TO
+        LEAVE SKIN HEALTHY, BEAUTIFUL AND STRONG SO THAT YOU CAN ALWAYS BUT YOUR
+        BEST FOOT FORWARD.
+      </p>
+      <div className="skinTypeWrapper">
+        <div className="profile"></div>
+        <form>
+            <h3 className="chooseone"> CHOOSE ONE </h3>
+          <select /* onChange={(e) => handleChange(e)} */ name="type">
+            <option value="">Select Skin Type</option>
+            {skinTypes &&
+              lastThree.map((skinType) => (
+                <option /* value={skinType.name}  */ key={skinType.id}>
+                  {skinType.name}
+                </option>
+              ))}
+          </select>
+          <br/>
+          <select onChange={(e) => handleChange(e)} name="concern">
+            <option value="">Select Skin Concern</option>
+            <option value="Acne">Acne</option>
+            <option value="Hyperpigmentation">Hyperpigmentation</option>
+            <option value="Dry Skin">Dry Skin</option>
+          </select>
+          <br/>
+          <button className="btn" onClick={(e) => handleSubmit(e)}>Submit</button>
+        </form>
+      </div>
     </>
   );
 }

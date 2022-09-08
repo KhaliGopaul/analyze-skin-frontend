@@ -1,9 +1,15 @@
-export default function Header () {
+import { useNavigate } from "react-router-dom";
+
+export default function Header() {
+
+    const navigate = useNavigate()
+    const goHome = ()=> navigate("/")
+  
     return (
-        <>
-        <h1> SKIN ANALYZE </h1>
-        </>
-    )
-
+    <header>
+      <button className="btn" onClick={goHome}>
+        <h1> ANALYZE SKIN </h1>
+      </button>
+    </header>
+  );
 }
-

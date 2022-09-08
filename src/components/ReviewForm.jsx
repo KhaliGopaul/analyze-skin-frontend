@@ -12,7 +12,7 @@ export default function ReviewForm() {
     name: "",
   });
 
-  const [reviewSent, setReviewSent] = useState(false);
+//   const [reviewSent, setReviewSent] = useState(false);
 
   const [setError] = useState("");
 
@@ -52,7 +52,7 @@ export default function ReviewForm() {
 
   return (
     <section>
-      {!reviewSent ? (
+       
         <div id="form-box">
           <h1 className="title">Add Review</h1>
           <div className="content">
@@ -90,9 +90,6 @@ export default function ReviewForm() {
             </form>
           </div>
         </div>
-      ) : (
-        <>Your Skin Rocks!</>
-      )}
     </section>
   );
 }
