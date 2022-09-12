@@ -11,8 +11,8 @@ export default function Results() {
   let navigate = useNavigate();
 
   const handleReviews = () => {
-    navigate("/ReviewForm")
-  } 
+    navigate("/ReviewForm");
+  };
 
   useEffect(() => {
     fetch("https://analyze-skin-api.web.app/products")
@@ -36,16 +36,21 @@ export default function Results() {
           {products &&
             products.map((product) => (
               <div className="productWrapper" key={product.id}>
-                <img className="productimage"src={product.imagePath} />
+                <img className="productimage" src={product.imagePath} />
                 <h3>{product.productName}</h3>
                 <p>{product.productDescription}</p>
-                <a href={product.productLink} >Buy Here</a>
+                <a href={product.productLink}>Buy Here</a>
               </div>
             ))}
         </div>
-<button onClick={handleReviews}>Submit Review</button>
+        <div className="btncontainer">
+          <button className="btn getstarted" onClick={handleReviews}>
+            Submit Review
+          </button>
+         
+        </div>
       </div>
-      {/* <button onClick={handleGetStarted}>Get Started</button> */}
+      {/* <button onClick={getStarted}>Get Started</button> */}
     </>
   );
 }

@@ -8,13 +8,14 @@ export default function Reviews (){
     console.log(reviews)
 
     return(
-        <>
+        <section className="btngroup reviews">
+            <h2 style={{textAlign: "center"}}>Reviews</h2>
         {reviews && reviews.map(review =>(
-            <div key={review.id}>
-                <p>{review.name}</p>
+            <div className="review" key={review.id}>
+                <p style={{fontWeight:800   }}>{review.name}</p>
                 <p>{review.review}</p>
             </div>
         ))}
-        </>
+        </section>
     )
 }

@@ -54,8 +54,8 @@ export default function ReviewForm() {
     <section>
        
         <div id="form-box">
-          <h1 className="title">Add Review</h1>
-          <div className="content">
+          <h1 style={{fontWeight:800   }} className="chooseone">Add Review</h1>
+          <div className="btncontainer">
             <form onSubmit={handleSubmit} className="form">
               <label htmlFor="name">
                 Name:
@@ -84,7 +84,7 @@ export default function ReviewForm() {
                 ></textarea>
               </label>
               <br />
-              <button id="btns" type="submit">
+              <button className="btn getstarted" id="btns" type="submit">
                 Submit
               </button>
             </form>
