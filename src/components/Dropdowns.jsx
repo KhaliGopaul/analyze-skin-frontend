@@ -25,15 +25,12 @@ export default function Dropdowns() {
   return (
     <>
       <p>
-        ALL WOMEN HAVE A UNIQUE SKIN STORY. FOR WOMEN OF COLOUR THE STORY TO
-        HEALTHY SKIN IS OFTEN COMPLICATED. ANALYZE SKIN WAS FOUNDED BASED ON A
-        PERSONAL BATTLE WITH SKIN ISSUES. SEEKING INFORMATION AND RESOURCES FOR
-        SPECIFIC PRODUCTS FOR SKIN TYPES 4-6 PROVED CHALLENGING, WHICH LED TO
-        THE MISSION OF FINDING PRODUCTS MADE FOR DARKER SKIN TONES AND PROVIDING
-        KNOWLEDGE OF RELIABLE SOLUTIONS. ANALYZE SKIN EMPOWERS PEOPLE OF COLOUR
-        BY PROVIDING THEM WITH SPECIFICALLY CRAFTED SKINCARE PRODUCTS, RAISING
-        AWARENESS ON THE UNIQUE NEEDS OF THEIR SKIN AND HELPING TO REGAIN THEIR
-        OWN SELF-CONFIDENCE THROUGH HYDRATED HEALTHY SKIN
+        All women have a unique skin story. For women of colour the story to
+        healthy skin is often complicated. Analyze skin was founded based on a
+        personal battle with skin issues. Analyze skin empowers people of colour
+        by providing them with specifically crafted skincare products, raising
+        awareness on the unique needs of their skin and helping to regain their
+        own self-confidence through hydrated healthy skin
       </p>
       <div className="skinTypeWrapper">
         <div className="profile"></div>

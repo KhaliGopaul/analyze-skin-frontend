@@ -11,7 +11,7 @@ const{skinTypes}=useContext(Skincontext)
 
   return (
     <>
-    <p>DESIGNED WITH WOMEN OF COLOUR IN MIND. WE ARE A BRAND THAT IS COMMITTED TO BEING A PART OF THE SKIN JOURNEY, CONNECTING WOMEN OF COLOUR WITH BRANDS SPECIFICALLY CREATED FOR THE SKIN NEEDS OF WOMEN OF COLOUR. DOING OUR PART TO INSPIRE THE CONFIDENCE WE ALL SHOULD FIND IN OUR SKIN.</p>
+    <p>Designed with women of colour in mind, Analyze Skin is committed to being a part of the skin journey, connecting women of colour with brands specifically created for the skin needs of women of colour. Doing our part to inspire the confidence we all should find in our skin.</p>
       <div className="skinTypeWrapper">
         {/* <img src="/assets/girls.jpg" /> */}
         <div className="mainimage"></div>
